@@ -9,10 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@google/generative-ai": "^0.15.0",
     "axios": "^1.7.2",
     "bcryptjs": "^2.4.3",
     "boxicons": "^2.1.4",
     "clsx": "^2.1.1",
+    "dotenv": "^16.4.5",
     "framer-motion": "^11.3.12",
     "jsonwebtoken": "^9.0.2",
     "mini-svg-data-uri": "^1.4.4",

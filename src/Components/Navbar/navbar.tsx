@@ -20,9 +20,9 @@ export default function App(){
             opacity:0
           }))
         }}
-        className="relative bg-black flex z-50 w-fit rounded-full border border-white border-2 p-1">
+        className="relative bg-black flex z-50 w-fit rounded-full border-white border-2 p-1">
             <List setPosition={setPosition}>HOME</List>
-            <List setPosition={setPosition}>TECH STACK</List>
+            <List setPosition={setPosition}>TECH-STACK</List>
             <List setPosition={setPosition}>LOGIN</List>
             <Cursor position={position}/>
         </ul>
