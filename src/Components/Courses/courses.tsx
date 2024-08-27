@@ -3,7 +3,7 @@ import { HoverEffect } from "../ui/card-hover-effect";
 
 export default function CardHoverEffectDemo() {
   return (
-    <div className="max-w-5xl mx-auto px-8">
+    <div className="max-w-5xl mx-auto px-8 font-monsterrat">
         <div className="flex justify-center font-semibold text-3xl">Favorite Tech Stacks</div>
       <HoverEffect items={projects} />
     </div>

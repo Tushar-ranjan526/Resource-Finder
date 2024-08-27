@@ -12,7 +12,7 @@ export default function App(){
   });
   return (
     <>
-      <div className="w-full bg-wb h-max flex justify-center absolute top-4">
+      <div className="w-full bg-wb h-max flex justify-center absolute top-4 font-monsterrat">
         <ul 
         onMouseLeave={()=>{
           setPosition(pv=>({

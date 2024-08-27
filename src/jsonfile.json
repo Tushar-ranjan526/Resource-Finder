@@ -1,0 +1,52 @@
+{
+    "brief": "Web development is the process of creating and maintaining websites. It involves a wide range of tasks, including planning, designing, coding, and testing. Web developers use various programming languages, frameworks, and tools to build interactive and engaging websites.",
+    "roadmap": [
+        "Learn the fundamentals of HTML, CSS, and JavaScript",
+        "Choose a front-end framework (React, Angular, Vue.js)",
+        "Explore back-end development (Node.js, Python, PHP)",
+        "Learn about databases and APIs",
+        "Practice building real-world projects"
+    ],
+    "type": [
+        {
+            "platform": "YouTube Channels",
+            "resources": [
+                "freeCodeCamp.org",
+                "Traversy Media",
+                "The Net Ninja",
+                "Dev Ed",
+                "Web Dev Simplified"
+            ]
+        },
+        {
+            "platform": "Blogs",
+            "resources": [
+                "CSS-Tricks",
+                "Smashing Magazine",
+                "A List Apart",
+                "Mozilla Developer Network",
+                "SitePoint"
+            ]
+        },
+        {
+            "platform": "Websites",
+            "resources": [
+                "W3Schools",
+                "MDN Web Docs",
+                "Codecademy",
+                "Khan Academy",
+                "FreeCodeCamp"
+            ]
+        },
+        {
+            "platform": "Courses",
+            "resources": [
+                "Udacity Nanodegree Program",
+                "Codecademy Pro",
+                "Udemy Courses",
+                "Coursera Specialization",
+                "edX Courses"
+            ]
+        }
+    ]
+}

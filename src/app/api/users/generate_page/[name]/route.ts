@@ -7,7 +7,7 @@ type Data = {
     ingredients: string[];
     instructions: string;
   };
-export async function GET(req:NextRequest){
+export async function GET(req:NextRequest,{params}:{params:{name:string}}){
     const genAI = new GoogleGenerativeAI(process.env.NEXT_APP_GOOGLE_API_KEY|| '');
 
     let model = genAI.getGenerativeModel({
@@ -16,7 +16,7 @@ export async function GET(req:NextRequest){
       });
       
       let prompt = `
-        Brief about web-development and list 5 resources of each type youtube channel,blogs,websites,courses using this JSON schema:
+        Brief about ${params.name} and list 5 resources of each type youtube channel,blogs,websites,courses using this JSON schema:
       {
         "brief":{"type":"String"},
         "roadmap":{"type":"array", "items": { "type": "string" }},
