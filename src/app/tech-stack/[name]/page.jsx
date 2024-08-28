@@ -1,37 +1,9 @@
-"use client";
 import Cards from "@/Components/Cards/card";
-import Skeleton from "@/Components/Skeleton/Skeleton";
-import { useEffect, useState } from "react";
 export default function InfoPage({ params }) {
-  const [data, setData] = useState({
-    intro: "",
-    road: [],
-    resource: [],
-  });
-  const [loading, setLoading] = useState(false);
-  const loadData = async () => {
-    try {
-      setLoading(true);
-      const got = await fetch(`/api/users/generate_page/${params.name}`);
-      const res = await got.json();
-      setData({
-        ...data,
-        intro: res.brief,
-        road: res.roadmap,
-        resource: res.type,
-      });
-      setLoading(false);
-    } catch (err) {
-      console.log("Error fetching data", err);
-      return;
-    }
-  };
-  useEffect(() => {
-    loadData();
-  }, []);
+    console.log(params.data);
   return (
     <>
-      <div className="h-[200vh] w-full px-20  mt-20 flex justify-center flex-col font-monsterrat">
+      {/* <div className="h-[200vh] w-full px-20  mt-20 flex justify-center flex-col font-monsterrat">
         <>
           <div className="w-full">
             <h1 className=" w-full text-base lg:text-5xl font-bold">
@@ -60,7 +32,24 @@ export default function InfoPage({ params }) {
             </div>
           </div>
         </>
-      </div>
+      </div> */}
     </>
   );
+}
+
+export const getStaticPaths=async()=>{
+    return {
+        paths:[ { params: {name: 'Back-End Development'}}, { params: {name: 'Full-Stack Web Devlopment'}},{ params: {name: 'App Development'}}, { params: {name: 'Data Science'}}, { params: {name: 'Data Structures & Algo'}}],
+        fallback:false,
+    }
+}
+
+export const getStaticProps= async(context)=>{
+    const name=context.params.name;
+    const data=(await fetch(`/api/users/generate_page/${name}`)).json();
+    return {
+        props:{
+            data,
+        }
+    }
 }
