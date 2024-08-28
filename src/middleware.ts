@@ -7,7 +7,7 @@ export function middleware(request: NextRequest) {
     const publicPath=path==='/login' || path==='/signup';
     const isAuth=request.cookies.get("token")?.value || '';
         if(publicPath && isAuth){
-            return NextResponse.redirect(new URL('/logout', request.url))
+            return NextResponse.redirect(new URL('/', request.url))
         }
         if(!isAuth && !publicPath){
             return NextResponse.redirect(new URL('/signup', request.url))
